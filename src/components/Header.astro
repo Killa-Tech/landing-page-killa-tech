@@ -1,0 +1,48 @@
+---
+import "../styles/header.css";
+---
+
+		<header class="site-header">
+			<a class="brand" href="#inicio" aria-label="Killa Tech, inicio">
+				<!--<img src="/logo_killatech.png" alt="" width="33" height="33" />  -->
+				<span class="text-2xl">KILLA TECH</span>
+			</a>
+			<nav class="desktop-nav" aria-label="Navegación principal">
+				<a class="button header-cta" href="#proyectos">Proyectos</a>
+				<a class="button header-cta" href="#nosotros">Fundadores</a>
+				<a class="button header-cta" href="mailto:hola@killatech.dev">Contactos</a>
+				<a href="https://github.com/Killa-Tech" aria-label="Killa Tech en GitHub">
+					<img src="/github_logo.png" alt="GitHub" width="32" height="32" />
+				</a>
+			</nav>
+			
+			<button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
+			<nav class="mobile-menu" id="mobile-menu" aria-label="Navegación móvil">
+				<a href="#proyectos">Proyectos</a>
+				<a href="#nosotros">Fundadores</a>
+				<a href="mailto:hola@killatech.dev">Contactos</a>
+				<a href="https://github.com/Killa-Tech" aria-label="Killa Tech en GitHub">
+					<img src="/github_logo.png" alt="GitHub" width="32" height="32" />
+				</a>
+			</nav>
+		</header>
+
+		<script>
+			const menuButton = document.querySelector(".menu-toggle");
+			const mobileMenu = document.querySelector("#mobile-menu");
+
+			menuButton?.addEventListener("click", () => {
+				const isExpanded = menuButton.getAttribute("aria-expanded") === "true";
+				menuButton.setAttribute("aria-expanded", String(!isExpanded));
+				menuButton.setAttribute("aria-label", isExpanded ? "Abrir menú" : "Cerrar menú");
+				mobileMenu?.classList.toggle("is-open", !isExpanded);
+			});
+
+			mobileMenu?.querySelectorAll("a").forEach((link) => {
+				link.addEventListener("click", () => {
+					menuButton?.setAttribute("aria-expanded", "false");
+					menuButton?.setAttribute("aria-label", "Abrir menú");
+					mobileMenu.classList.remove("is-open");
+				});
+			});
+		</script>

@@ -1,0 +1,223 @@
+.stack-section-heading h2 span {
+	color: var(--cyan);
+}
+.stack-section-heading h2 {
+	font-size: clamp(29px, 2.7vw, 34px);
+	font-weight: 700;
+	letter-spacing: -.035em;
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+.stack-card {
+	border: 1px solid rgba(129, 152, 185, .07);
+	border-radius: 11px;
+	background: #111b2e;
+}
+.stack-section {
+	border-top: 1px solid rgba(128, 151, 183, .06);
+}
+.stack-centered-heading {
+	margin-bottom: 27px;
+	text-align: center;
+}
+.stack-centered-heading h2 {
+	font-size: clamp(24px, 2.6vw, 32px);
+}
+.stack-centered-heading > p:last-child {
+	margin: 8px 0 0;
+	color: #aebacc;
+	font-size: 14px;
+}
+.stack-grid {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+}
+.stack-card {
+	padding: 18px;
+}
+.stack-card-heading {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	margin-bottom: 12px;
+}
+.stack-card-heading h3 {
+	font-size: 18px;
+}
+.stack-card-heading a {
+	font-size: 13px;
+	color: var(--cyan);
+}
+.stack-card-heading img {
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	object-fit: cover;
+}
+.stack-card-heading h3 span {
+	color: var(--cyan);
+}
+.stack-card-heading > span {
+	color: #8190a5;
+	font-size: 7px;
+}
+.stack-item {
+	display: flex;
+	min-height: 31px;
+	align-items: center;
+	justify-content: space-between;
+	gap: 8px;
+	padding: 5px 8px;
+	border-top: 1px solid rgba(122, 145, 176, .08);
+	font-size: 10px;
+}
+.stack-item > span {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.stack-item > span::first-letter {
+	color: var(--cyan);
+}
+.stack-item small {
+	color: #8290a3;
+	font-size: 7px;
+	white-space: nowrap;
+}
+.stack-mobile-heading,
+.mobile-stack {
+	display: none;
+}
+@media (max-width: 700px) {
+.stack-mobile-heading {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 10px;
+		margin: 0 0 11px;
+	}
+.stack-mobile-heading h2 {
+		margin: 0;
+		font-size: 15px;
+		font-weight: 700;
+		letter-spacing: -.02em;
+		line-height: 2.5;
+	}
+.stack-mobile-heading h2::first-letter {
+		color: var(--cyan);
+	}
+.stack-mobile-heading > span,
+.stack-mobile-heading > a {
+		color: #9ca9ba;
+		font-size: 8px;
+		white-space: nowrap;
+	}
+.stack-section-heading {
+		display: none;
+	}
+.stack-mobile-heading h2 {
+		font-size: 18px;
+	}
+.stack-mobile-heading > a {
+		color: var(--cyan);
+		font-weight: 700;
+	}
+.stack-section {
+		border: 0;
+	}
+.stack-section > .stack-section-heading,
+.stack-grid {
+		display: none;
+	}
+.mobile-stack {
+		display: block;
+	}
+.mobile-stack-grid {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		gap: 8px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+.stack-card-mobile {
+	border: 1px solid rgba(129, 152, 185, .07);
+	border-radius: 11px;
+	background: #111b2e;
+	padding: 8px;
+}
+.stack-card-heading-mobile {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	margin-bottom: 12px;
+}
+.stack-card-heading-mobile h3 {
+	font-size: 18px;
+}
+.stack-card-heading-mobile a {
+	font-size: 13px;
+	color: var(--cyan);
+}
+.stack-card-heading-mobile img {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	object-fit: cover;
+}
+.stack-card-heading-mobile h3 span {
+	color: var(--cyan);
+}
+.stack-card-heading-mobile > span {
+	color: #8190a5;
+	font-size: 7px;
+}
+.mobile-stack-item {
+		display: flex;
+		min-width: 0;
+		align-items: center;
+		gap: 8px;
+		padding: 9px;
+		border: 1px solid rgba(129, 152, 185, .06);
+		border-radius: 8px;
+		background: #111b2c;
+	}
+.mobile-stack-item > span {
+		display: grid;
+		width: 30px;
+		height: 30px;
+		flex: 0 0 auto;
+		place-items: center;
+		border-radius: 7px;
+		background: #1a2a3e;
+		color: var(--cyan);
+		font-size: 13px;
+		font-weight: 700;
+	}
+.mobile-stack-item > div {
+		display: flex;
+		min-width: 0;
+		flex-direction: column;
+	}
+.mobile-stack-item strong {
+		overflow: hidden;
+		font-size: 10px;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+.mobile-stack-item small {
+		overflow: hidden;
+		color: #8e9cb0;
+		font-size: 8px;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+}

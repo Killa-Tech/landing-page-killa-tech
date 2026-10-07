@@ -1,0 +1,67 @@
+---
+import "../styles/founders.css";
+const fundadores = [
+	{
+		nombre: "Nahuel A. Cachambi",
+		enlace: "https://github.com/cachambi-dev",
+		github: "@cachambi-dev",
+		perfil: "https://avatars.githubusercontent.com/u/97699992?v=4",
+		profesion: "Estudiante de Ingenieria Informatica"
+	},
+	{
+		nombre: "Matias J. Rodriguez ",
+		enlace: "https://github.com/jesus-dev-rodriguez",
+		github: "@jesus-dev-rodriguez",
+		perfil: "https://avatars.githubusercontent.com/u/186092964?v=4",
+		profesion: "Estudiante de Ingenieria Informatica"
+	},
+];
+const mobileStack = [
+	["✣", "Astro", "Islands Architecture"],
+	["‹›", "TypeScript", "Strict Type Safety"],
+	["‹›", "Rust & Wasm", "Zero-Cost Systems"],
+	["◉", "Tailwind", "Cyber Design Tokens"],
+	["▤", "Docker", "Hermetic Packaging"],
+	["☁", "AWS Edge", "Global Distribution"],
+];
+---
+
+<section class="stack-section section-shell" id="stack">
+	<div class="stack-section-heading stack-centered-heading">
+		<h2>Fundadores de Killa Tech</h2>
+		<p>Iluminando el camino de la innovación tecnológica.</p>
+	</div>
+	<div class="stack-grid">
+		{fundadores.map((stack) => (
+			<article class="stack-card">
+				<div class="stack-card-heading">
+					<h3> {stack.nombre}<br/></h3>
+					<img src={stack.perfil} alt={stack.nombre} />
+					<a href={stack.enlace} target="_blank" rel="noopener noreferrer">
+						<h4>{stack.github}</h4>
+					</a>
+					<p>{stack.profesion}</p>
+				</div>
+				
+			</article>
+		))} 
+	</div>
+	<div class="mobile-stack">
+		<div class="stack-mobile-heading"><h2>▏FUNDADORES DE KILLA TECH</h2></div>
+		<div class="mobile-stack-grid">
+			{fundadores.map((stack) => (
+			<article class="stack-card-mobile">
+				<div class="stack-card-heading-mobile">
+					<h3> {stack.nombre}<br/></h3>
+					<img src={stack.perfil} alt={stack.nombre} />
+					<a href={stack.enlace} target="_blank" rel="noopener noreferrer">
+						<h4>{stack.github}</h4>
+					</a>
+					<p>{stack.profesion}</p>
+				</div>
+				
+			</article>
+		))} 
+		</div>
+	</div>
+</section>

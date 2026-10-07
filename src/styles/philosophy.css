@@ -1,0 +1,181 @@
+.philosophy-heading h2 span {
+	color: var(--cyan);
+}
+.philosophy {
+	display: grid;
+	grid-template-columns: .95fr 2.05fr;
+	align-items: center;
+	gap: 36px;
+	padding-block: 38px;
+	border-top: 1px solid rgba(128, 151, 183, .06);
+}
+.philosophy-heading h2 {
+	margin-bottom: 0;
+	font-size: clamp(29px, 2.7vw, 34px);
+	font-weight: 700;
+	letter-spacing: -.035em;
+	line-height: 1;
+	margin-bottom: 10px;
+}
+.philosophy-heading .eyebrow {
+	margin-bottom: 8px;
+	font-size: 9px;
+}
+.section-intro {
+	margin: 0;
+	color: #b0bdcf;
+	font-size: 15px;
+	line-height: 1.55;
+	margin-bottom: 20px;
+}
+.pillar-grid-desktop {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 16px;
+}
+.philosophy-mobile-intro {
+	display: none;
+}
+.pillar-card-desktop {
+	border: 1px solid rgba(129, 152, 185, .07);
+	border-radius: 11px;
+	background: #111b2e;
+}
+.pillar-card-desktop {
+	display: flex;
+	min-height: 230px;
+	flex-direction: column;
+	padding: 22px;
+}
+.pillar-icon {
+	display: grid;
+	width: 39px;
+	height: 39px;
+	place-items: center;
+	margin-bottom: 12px;
+	border: 1px solid rgba(135, 162, 196, .08);
+	border-radius: 9px;
+	background: #19263b;
+	color: var(--cyan);
+	font-size: 20px;
+}
+.pillar-card-desktop h3 {
+	margin-bottom: 7px;
+	font-size: 17px;
+	line-height: 1;
+}
+.pillar-card-desktop p {
+	margin-bottom: 15px;
+	color: #b1bdce;
+	font-size: 13px;
+	line-height: 1.55;
+}
+.card-tag {
+	margin-top: auto;
+	color: var(--cyan);
+	font-size: 8px;
+	font-weight: 600;
+	letter-spacing: .04em;
+}
+.philosophy-mobile-heading,
+.pillar-grid-mobile,
+.pillar-card-mobile {
+	display: none;
+}
+@media (max-width: 900px) and (min-width: 701px) {
+.philosophy {
+		grid-template-columns: 1fr;
+		gap: 20px;
+	}
+.pillar-card-mobile {
+		padding: 17px;
+	}
+
+}
+@media (max-width: 700px) {
+.philosophy {
+		display: block;
+		padding-block: 5px 0;
+		border: 0;
+	}
+.philosophy .philosophy-heading {
+		margin-bottom: 20px;
+	}
+.pillar-grid-mobile {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 9px;
+		padding-top: 0;
+	}
+.pillar-card-mobile {
+		position: relative;
+		display: grid;
+		min-height: 0;
+		grid-template-columns: 32px 1fr;
+		column-gap: 9px;
+		padding: 12px;
+		border-radius: 11px;
+		background: #111b2c;
+	}
+.pillar-icon {
+		width: 32px;
+		height: 32px;
+		grid-row: 1 / span 2;
+		margin: 0;
+		border-radius: 8px;
+		font-size: 16px;
+	}
+.pillar-card-mobile h3 {
+		line-height: 2;
+		font-size: 15px;
+	}
+.pillar-card-mobile p {
+		grid-column: 1 / -1;
+		margin: 8px 0 4px;
+		font-size: 14px;
+		line-height: 1.55;
+	}
+.card-tag {
+		grid-column: 1 / -1;
+		font-size: 8px;
+	}
+.philosophy-mobile-heading {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 10px;
+		margin: 0 0 11px;
+	}
+.philosophy-mobile-intro {
+		display: block;
+	}
+.philosophy-mobile-heading h2 {
+		margin: 0;
+		font-size: 15px;
+		font-weight: 700;
+		letter-spacing: -.02em;
+	}
+.philosophy-mobile-heading h2::first-letter {
+		color: var(--cyan);
+	}
+.philosophy-mobile-heading > span,
+.philosophy-mobile-heading > a {
+		color: #9ca9ba;
+		font-size: 8px;
+		white-space: nowrap;
+	}
+.philosophy-heading,
+.pillar-grid-desktop {
+		display: none;
+	}
+.philosophy-mobile-heading h2 {
+		font-size: 18px;
+	}
+.philosophy-mobile-intro > .philosophy-mobile-heading {
+		margin-top: 19px;
+	}
+.philosophy-mobile-heading > a {
+		color: var(--cyan);
+		font-weight: 700;
+	}
+}

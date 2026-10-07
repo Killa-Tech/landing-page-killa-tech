@@ -1,0 +1,56 @@
+---
+import "../styles/philosophy.css";
+const pillars = [
+	{
+		icon: "💻",
+		title: "Arquitectura & Buenas Prácticas",
+		description:
+			"Diseñamos y construimos software utilizando estándares de la industria (Clean Architecture, Testing, CI/CD). No nos quedamos en la teoría de clase; creamos código listo para producción.",
+	},
+	{
+		icon: "🤝",
+		title: "Cultura Colaborativa",
+		description:
+			"Creemos firmemente en el código abierto. Trabajamos usando Git Flow, realizamos Pull Requests estructurados y fomentamos la revisión de código entre pares para aprender en equipo.",
+		
+	},
+	{
+		icon: "🚀",
+		title: "Incubadora de Startups",
+		description:
+			"Fomentamos la visión de negocio detrás de cada línea de código. Queremos que los proyectos de la facultad no se queden en un repositorio olvidado, sino que evolucionen a startups.",
+		
+	},
+];
+---
+
+<section class="philosophy section-shell" id="filosofia">
+				<div class="philosophy-heading philosophy-intro">
+					<h2>Nuestra Filosofía: <span>Killa</span> es Luna en Quechua.</h2>
+					<p class="section-intro">En killa-tech (donde "Killa" rinde homenaje a la Luna en quechua, iluminando el camino del desarrollo nocturno), nacimos con un propósito claro: cerrar la brecha entre la teoría académica y el ritmo acelerado de la industria tecnológica.</p>
+				</div>
+				<div class="pillar-grid-desktop">
+					{pillars.map((pillar) => (
+						<article class="pillar-card-desktop">
+							<div class="pillar-icon">{pillar.icon}</div>
+							<h3>{pillar.title}</h3>
+							<p>{pillar.description}</p>
+						</article>
+					))}
+				</div>
+				<div class="philosophy-mobile-intro philosophy-intro">
+					<div class="philosophy-mobile-heading">
+						<h2>▏NUESTRA FILOSOFIA:</h2>
+					</div>
+					<p class="section-intro">En killa-tech (donde "Killa" rinde homenaje a la Luna en quechua, iluminando el camino del desarrollo nocturno), nacimos con un propósito claro: cerrar la brecha entre la teoría académica y el ritmo acelerado de la industria tecnológica.</p>
+				</div>
+				<div class="pillar-grid-mobile">
+					{pillars.map((pillar) => (
+						<article class="pillar-card-mobile">
+							<div class="pillar-icon">{pillar.icon}</div>
+							<h3>{pillar.title}</h3>
+							<p>{pillar.description}</p>
+						</article>
+					))}
+				</div> 
+			</section>

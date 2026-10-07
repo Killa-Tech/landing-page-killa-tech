@@ -1,0 +1,58 @@
+.cta-copy h2 {
+	margin-bottom: 0;
+	font-size: clamp(29px, 2.7vw, 34px);
+	font-weight: 700;
+	letter-spacing: -.035em;
+	line-height: 1;
+	margin-bottom: 10px;
+}
+.about-cta {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	gap: 50px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	padding: 44px 56px;
+	overflow: hidden;
+	border: 1px solid rgba(131, 170, 193, .1);
+	border-radius: 15px;
+	background:
+		radial-gradient(ellipse at 97% 6%, rgba(35, 240, 224, .15), transparent 28%),
+		radial-gradient(ellipse at 0% 100%, rgba(0, 220, 205, .14), transparent 28%),
+		linear-gradient(110deg, #142a3d, #1b273b 57%, #202b3e);
+	box-shadow: 0 14px 40px rgba(0, 0, 0, .18);
+}
+.cta-copy {
+	max-width: 500px;
+}
+.cta-copy .eyebrow {
+	font-size: 9px;
+}
+.cta-copy h2 {
+	margin-bottom: 13px;
+	font-size: clamp(26px, 3vw, 37px);
+}
+.cta-copy > p:last-child {
+	max-width: 450px;
+	margin: 0;
+	color: #c0cad8;
+	font-size: 15px;
+	line-height: 1.65;
+}
+.cta-actions {
+	display: flex;
+	min-width: 330px;
+	flex-direction: column;
+	gap: 11px;
+}
+@media (max-width: 700px) {
+	.about-cta {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+	}
+}

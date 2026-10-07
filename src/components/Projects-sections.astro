@@ -1,0 +1,108 @@
+---
+import "../styles/projects.css";
+const projects = [
+	{
+		status: "PRODUCCIÓN",
+		title: "Expojuy-2026",
+		repo: "killa-tech / expojuy-2026",
+		description:
+			"Plataforrma de gestión de eventos masivos, acreditaciones y mapas interactivos para exposiciones y congresos tecnológicos.",
+		tags: ["NodeJs", "TailwindCSS", "React", "TypeScript"],
+		stars: "142",
+		forks: "38",
+		version: "v1.4.1",
+		icon: "🔍",
+	},
+	{
+		status: "ACTIVE COMMUNITY",
+		title: "Killa-cv",
+		repo: "killa-tech / killa-cv",
+		description:
+			"Generador de CVs y portafolios profesionales en línea, con plantillas personalizables y despliegue instantáneo en GitHub Pages.",
+		tags: ["TypeScript","Typst","Python","CSS","Makefile","HTML"],
+		stars: "328",
+		forks: "84",
+		version: "v1.0.8",
+		icon: "📝",
+	},
+	{
+		status: "ACTIVE COMMUNITY",
+		title: "Unju-agenda",
+		repo: "killa-tech / unju-agenda",
+		description:
+			"Sistema de gestión de agendas académicas y eventos universitarios, con integración a calendarios externos y notificaciones push.",
+		tags: ["TypeScript", "CSS", "JavaScript"],
+		stars: "95",
+		forks: "12",
+		version: "v0.9.4",
+		icon: "📅",
+	},
+	{
+		status: "ACTIVE COMMUNITY",
+		title: "Landing-page-killa-tech",
+		repo: "killa-tech / landing-page-killa-tech",
+		description:
+			"Landing page oficial de Killa Tech, con secciones de bienvenida, filosofía, proyectos y colaboración, optimizada para SEO y rendimiento.",
+		tags: ["Astro", "JavaScript", "CSS"],
+		stars: "210",
+		forks: "49",
+		version: "v1.1.0",
+		icon: "🌐",
+	},
+];
+const mobileRepos = [
+	{
+		name: "Expojuy-2026",
+		description: "Plataforrma de gestión de eventos masivos, acreditaciones y mapas interactivos para exposiciones y congresos tecnológicos.",
+		language: "TypeScript",
+		metadata: "v7.0.2",
+		stars: "482",
+	},
+	{
+		name: "Killa-cv",
+		description: "Generador de CVs y portafolios profesionales en línea, con plantillas personalizables y despliegue instantáneo en GitHub Pages.",
+		language: "TypeScript",
+		metadata: "v7.0.2",
+		stars: "1.2k",
+	},
+	{
+		name: "Unju-agenda",
+		description: "Sistema de gestión de agendas académicas y eventos universitarios, con integración a calendarios externos y notificaciones push.",
+		language: "TypeScript",
+		metadata: "v7.0.2",
+		stars: "319",
+	},
+];
+---
+
+<section class="projects-section section-shell" id="proyectos">
+				<div class="project-section-heading project-heading-row">
+					<div>
+						<h2>Proyectos realizados</h2>
+					</div>
+				</div>
+				<div class="project-grid">
+					{projects.map((project) => (
+						<article class="project-card">
+							<div class="project-top"><span class="project-status">● {project.status}</span><span>{project.version}</span></div>
+							<div class="project-title-row"><div><h3>{project.title}</h3><span class="project-repo-path">{project.repo}</span></div><span class="project-icon">{project.icon}</span></div>
+							<p class="project-description">{project.description}</p>
+							<div class="tag-list">{project.tags.map((tag) => <span>{tag}</span>)}</div>
+							<div class="project-bottom"><span>☆ {project.stars} &nbsp;⑂ {project.forks}</span><a href="https://github.com/Killa-Tech">VER REPO</a></div>
+						</article>
+					))}
+				</div>
+				<div class="project-mobile-repositories">
+					<div class="projects-mobile-heading">
+						<h2>▏PROYECTOS REALIZADOS</h2>
+					</div>
+					{mobileRepos.map((repo) => (
+						<a class="mobile-repo-card" href="https://github.com/Killa-Tech">
+							<div class="mobile-repo-title"><span>{repo.name}</span><span>☆ {repo.stars}</span></div>
+							<span class="project-repo-path">killatech / {repo.name}</span>
+							<p>{repo.description}</p>
+							<div class="mobile-repo-meta"><span>● {repo.language}</span><span>{repo.metadata}</span><b>↗</b></div>
+						</a>
+					))}
+				</div>
+			</section>

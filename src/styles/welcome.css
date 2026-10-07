@@ -1,0 +1,333 @@
+.hero {
+	display: grid;
+	grid-template-columns: minmax(0, 1.2fr) minmax(360px, .8fr);
+	align-items: center;
+	gap: 56px;
+	min-height: 510px;
+	padding-top: 50px;
+}
+.hero-copy {
+	min-width: 0;
+}
+.hero-copy > .eyebrow {
+	display: inline-flex;
+	align-items: center;
+	gap: 7px;
+	padding: 5px 10px;
+	border: 1px solid rgba(32, 244, 230, .14);
+	border-radius: 20px;
+	background: rgba(16, 36, 53, .8);
+}
+.status-dot {
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background: var(--cyan);
+	box-shadow: 0 0 9px var(--cyan);
+}
+.hero h1 {
+	max-width: 630px;
+	margin-bottom: 14px;
+	font-size: clamp(34px, 4vw, 53px);
+	font-weight: 700;
+	letter-spacing: -.045em;
+	line-height: 1.02;
+}
+.hero h1 span {
+	color: var(--cyan);
+}
+.hero-description {
+	max-width: 590px;
+	margin-bottom: 22px;
+	color: #b6c1d1;
+	font-size: 15px;
+	line-height: 1.55;
+}
+.hero-description strong {
+	color: #e6edf7;
+	font-weight: 500;
+}
+.hero-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+}
+.stats-row {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 8px;
+	margin-top: 31px;
+}
+.stats-row > div {
+	display: flex;
+	min-height: 60px;
+	flex-direction: column;
+	justify-content: center;
+	padding: 8px 12px;
+	border-radius: 7px;
+	background: rgba(15, 25, 43, .78);
+}
+.stats-row strong {
+	color: var(--cyan);
+	font-size: 18px;
+	line-height: 1.1;
+}
+.stats-row span {
+	margin-top: 5px;
+	color: #a4b0c1;
+	font-size: 8px;
+	line-height: 1.25;
+}
+.mission-console {
+	padding: 16px;
+	border: 1px solid rgba(121, 151, 184, .1);
+	border-radius: 15px;
+	background: linear-gradient(145deg, #111b2e, #0b1425 68%);
+	box-shadow: 0 24px 80px rgba(0, 0, 0, .25);
+}
+.console-top,
+.console-bottom {
+	color: #abb7c7;
+	font-size: 21px;
+	letter-spacing: .03em;
+}
+.console-top > span:first-child {
+	color: var(--cyan);
+	letter-spacing: 2px;
+}
+.console-top b,
+.console-bottom span:first-child {
+	color: var(--cyan);
+	font-weight: 600;
+}
+.moon-window {
+	display: grid;
+	height: 174px;
+	place-items: center;
+	margin-bottom: 10px;
+	overflow: hidden;
+	border: 1px solid rgba(112, 153, 182, .09);
+	border-radius: 15px;
+	background:
+		radial-gradient(ellipse at 50% 68%, rgba(0, 222, 205, .12), transparent 43%),
+		#091223;
+}
+.moon-glow {
+	position: relative;
+	display: grid;
+	width: 150px;
+	height: 150px;
+	place-items: center;
+	border-radius: 15px;
+	background: radial-gradient(circle, rgba(27, 242, 229, .24), rgba(14, 65, 85, .18) 54%, transparent 72%);
+	filter: drop-shadow(0 0 15px rgba(31, 239, 226, .5));
+}
+.moon-surface {
+	position: absolute;
+	right: 20px;
+	bottom: 19px;
+	width: 94px;
+	height: 79px;
+	border: 1px solid rgba(147, 242, 237, .35);
+	border-radius: 48% 52% 17% 18%;
+	background: linear-gradient(140deg, #193b50, #88a5a2 48%, #152c41 49%);
+	clip-path: polygon(0 35%, 18% 26%, 31% 35%, 44% 12%, 57% 40%, 72% 21%, 100% 49%, 100% 100%, 0 100%);
+}
+.moon-peak {
+	position: absolute;
+	right: 32px;
+	bottom: 35px;
+	width: 47px;
+	height: 47px;
+	background: linear-gradient(135deg, #58b4b6, #0d2438);
+	clip-path: polygon(0 100%, 56% 0, 100% 100%);
+}
+.moon-orbit,
+.moon-ring {
+	position: absolute;
+	border: 1px solid rgba(32, 244, 230, .85);
+	border-radius: 50%;
+	transform: rotate(-34deg);
+} 
+.moon-orbit {
+	width: 110px;
+	height: 68px;
+}
+.moon-ring {
+	width: 82px;
+	height: 120px;
+	border-color: rgba(161, 245, 240, .44);
+	transform: rotate(35deg);
+}
+.moon-data {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	margin: 12px 7px;
+}
+.moon-data div {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+}
+.moon-data div + div {
+	padding-left: 14px;
+	border-left: 1px solid rgba(123, 148, 176, .12);
+}
+.moon-data span {
+	color: var(--subtle);
+	font-size: 7px;
+}
+.moon-data strong {
+	color: #edf5ff;
+	font-size: 13px;
+}
+.moon-data div + div strong {
+	color: var(--cyan);
+}
+.console-code {
+	padding: 10px 12px;
+	border-radius: 4px;
+	background: #070f1e;
+	color: #becada;
+	font: 20px/1.7 Consolas, monospace;
+}
+.console-code p {
+	margin: 0;
+}
+.console-code p:first-child {
+	color: #7e8ca0;
+}
+.console-code span {
+	color: #62c9ff;
+}
+.console-code b {
+	color: #36edc7;
+	font-weight: 400;
+}
+.console-bottom {
+	margin-top: 12px;
+	font-size: 7px;
+}
+.mobile-hero-actions,
+.telemetry-mobile {
+	display: none;
+}
+@media (max-width: 900px) and (min-width: 701px) {
+.hero {
+		grid-template-columns: minmax(0, 1.1fr) minmax(300px, .9fr);
+		gap: 26px;
+	}
+.hero h1 {
+		font-size: 39px;
+	}
+.stats-row span {
+		font-size: 7px;
+	}
+
+}
+@media (max-width: 700px) {
+.hero {
+		display: flex;
+		flex-direction: column;
+	}
+.hero-copy > .eyebrow {
+		margin-bottom: 13px;
+		padding: 5px 9px;
+		font-size: 9px;
+	}
+.hero h1 {
+		justify-self: center;
+		max-width: 450px;
+		margin-bottom: 30px;
+		font-size: clamp(29px, 8vw, 38px);
+		line-height: 1.12;
+		letter-spacing: -.035em;
+	}
+.hero-description {
+		text-align: center;
+		margin-bottom: 25px;
+		color: #b2bfd0;
+		font-size: 15px;
+		line-height: 1.52;
+	}
+.hero-description strong {
+		font-weight: 400;
+	}
+.hero-actions,
+.stats-row,
+.mission-console {
+		display: none;
+	}
+.mobile-hero-actions {
+		display: flex;
+		justify-content: center;
+	}
+.mobile-hero-actions .button {
+		min-height: 43px;
+		border-radius: 7px;
+		font-size: 12px;
+		letter-spacing: .06em;
+		margin-bottom: 15px;
+	}
+.telemetry-mobile {
+		display: block;
+		margin-top: 15px;
+		padding: 12px;
+		border: 1px solid rgba(135, 157, 186, .07);
+		border-radius: 11px;
+		background: #111b2d;
+	}
+.telemetry-mobile-heading {
+		display: flex;
+	}
+.telemetry-mobile-heading .moon-window {
+		width: 100%;
+		padding: 10px;
+	}
+.telemetry-mobile-heading img {
+		width: 150px;
+		height: 150px;
+		object-fit: contain;
+	}
+.telemetry-mobile-heading div {
+		display: flex;
+		flex-direction: column;
+		line-height: 1.4;
+	}
+.telemetry-mobile-heading div strong {
+		font-size: 11px;
+		letter-spacing: .04em;
+	}
+.telemetry-mobile-heading div > span {
+		color: var(--cyan);
+		font-size: 9px;
+	}
+.version-chip {
+		margin-left: auto;
+		padding: 5px 8px;
+		border-radius: 5px;
+		background: #1c2a3e;
+		color: #bfcadc;
+		font-size: 8px;
+	}
+.telemetry-mobile-stats {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		padding: 11px 4px 0;
+	}
+.telemetry-mobile-stats > div {
+		display: flex;
+		flex-direction: column;
+		gap: 2px;
+	}
+.telemetry-mobile-stats span {
+		color: #9ba9bd;
+		font-size: 8px;
+		letter-spacing: .08em;
+	}
+.telemetry-mobile-stats strong {
+		color: var(--cyan);
+		font-size: 13px;
+	}
+
+}
