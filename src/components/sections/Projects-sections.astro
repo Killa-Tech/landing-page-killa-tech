@@ -1,5 +1,10 @@
 ---
-import "../styles/projects.css";
+import "../../styles/projects.css";
+import CurriculumIcon from "../icons/Curriculum.astro";
+import TecnologiaIcon from "../icons/Tecnologia.astro";
+import AgendaIcon from "../icons/Agenda.astro";
+import PaginaWebIcon from "../icons/PaginaWeb.astro";
+
 const projects = [
 	{
 		status: "PRODUCCIÓN",
@@ -11,7 +16,7 @@ const projects = [
 		stars: "142",
 		forks: "38",
 		version: "v1.4.1",
-		icon: "🔍",
+		icon: "tecnologia",
 	},
 	{
 		status: "ACTIVE COMMUNITY",
@@ -23,7 +28,7 @@ const projects = [
 		stars: "328",
 		forks: "84",
 		version: "v1.0.8",
-		icon: "📝",
+		icon: "curriculum",
 	},
 	{
 		status: "ACTIVE COMMUNITY",
@@ -35,7 +40,7 @@ const projects = [
 		stars: "95",
 		forks: "12",
 		version: "v0.9.4",
-		icon: "📅",
+		icon: "agenda",
 	},
 	{
 		status: "ACTIVE COMMUNITY",
@@ -47,7 +52,7 @@ const projects = [
 		stars: "210",
 		forks: "49",
 		version: "v1.1.0",
-		icon: "🌐",
+		icon: "paginaweb",
 	},
 ];
 const mobileRepos = [
@@ -85,7 +90,19 @@ const mobileRepos = [
 					{projects.map((project) => (
 						<article class="project-card">
 							<div class="project-top"><span class="project-status">● {project.status}</span><span>{project.version}</span></div>
-							<div class="project-title-row"><div><h3>{project.title}</h3><span class="project-repo-path">{project.repo}</span></div><span class="project-icon">{project.icon}</span></div>
+							<div class="project-title-row">
+								<div>
+									<h3>{project.title}</h3>
+									<span class="project-repo-path">{project.repo}</span>
+								</div>
+								<span class="project-icon">
+									{project.icon === "tecnologia" ? <TecnologiaIcon size={25} color="#ffffff" /> : 
+									project.icon === "curriculum" ? <CurriculumIcon size={25} color="#ffffff" /> : 
+									project.icon === "agenda" ? <AgendaIcon size={25} color="#ffffff" /> : 
+									project.icon === "paginaweb" ? <PaginaWebIcon size={25} color="#ffffff" /> : 
+									project.icon}
+								</span>
+							</div>
 							<p class="project-description">{project.description}</p>
 							<div class="tag-list">{project.tags.map((tag) => <span>{tag}</span>)}</div>
 							<div class="project-bottom"><span>☆ {project.stars} &nbsp;⑂ {project.forks}</span><a href="https://github.com/Killa-Tech">VER REPO</a></div>

@@ -1,21 +1,25 @@
 ---
-import "../styles/philosophy.css";
+import "../../styles/philosophy.css";
+import LaptopIcon from "../icons/Laptop.astro";
+import TeamWorkIcon from "../icons/TeamWork.astro";
+import CrecimientoIcon from "../icons/Crecimiento.astro";
+
 const pillars = [
 	{
-		icon: "💻",
+		icon: "laptop",
 		title: "Arquitectura & Buenas Prácticas",
 		description:
 			"Diseñamos y construimos software utilizando estándares de la industria (Clean Architecture, Testing, CI/CD). No nos quedamos en la teoría de clase; creamos código listo para producción.",
 	},
 	{
-		icon: "🤝",
+		icon: "teamwork",
 		title: "Cultura Colaborativa",
 		description:
 			"Creemos firmemente en el código abierto. Trabajamos usando Git Flow, realizamos Pull Requests estructurados y fomentamos la revisión de código entre pares para aprender en equipo.",
 		
 	},
 	{
-		icon: "🚀",
+		icon: "crecimiento",
 		title: "Incubadora de Startups",
 		description:
 			"Fomentamos la visión de negocio detrás de cada línea de código. Queremos que los proyectos de la facultad no se queden en un repositorio olvidado, sino que evolucionen a startups.",
@@ -32,7 +36,12 @@ const pillars = [
 				<div class="pillar-grid-desktop">
 					{pillars.map((pillar) => (
 						<article class="pillar-card-desktop">
-							<div class="pillar-icon">{pillar.icon}</div>
+							<div class="pillar-icon">
+								{pillar.icon === "laptop" ? <LaptopIcon size={25} color="#ffffff" /> : 
+								pillar.icon === "teamwork" ? <TeamWorkIcon size={25} color="#ffffff" /> :
+								pillar.icon === "crecimiento" ? <CrecimientoIcon size={25} color="#ffffff" /> : 
+								pillar.icon}
+							</div>
 							<h3>{pillar.title}</h3>
 							<p>{pillar.description}</p>
 						</article>
@@ -47,7 +56,9 @@ const pillars = [
 				<div class="pillar-grid-mobile">
 					{pillars.map((pillar) => (
 						<article class="pillar-card-mobile">
-							<div class="pillar-icon">{pillar.icon}</div>
+							<div class="pillar-icon">
+								{pillar.icon === "laptop" ? <LaptopIcon size={20} color="#ffffff" /> : pillar.icon}
+							</div>
 							<h3>{pillar.title}</h3>
 							<p>{pillar.description}</p>
 						</article>

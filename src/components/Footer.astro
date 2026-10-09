@@ -1,17 +1,64 @@
 ---
 import "../styles/footer.css";
+import GitHubIcon from "./icons/GitHub.astro";
+import DiscordIcon from "./icons/Discord.astro";
+import WhatsAppIcon from "./icons/WhatsApp.astro";
+import MailIcon from "./icons/Mail.astro";
+import TelefonoIcon from "./icons/Telefono.astro";
+
 ---
 
-		<footer class="site-footer">
-			<div class="footer-main section-shell">
-				<div class="footer-about">
-					<a class="brand" href="#inicio"><img src="/logo_killatech.png" alt="" width="32" height="32" /><span>KILLA TECH</span></a>
-					<p>Infraestructura orbital, computación distribuida e ingeniería de vanguardia para la era aeroespacial. Desarrollando soluciones autónomas y herramientas open source resilientes.</p>
-				</div>
-				<div class="footer-column"><h3>NAVEGACIÓN</h3><a href="#inicio">Inicio</a><a href="#filosofia">Soluciones de Misión</a><a href="#proyectos">Repositorios Libres</a><a href="#stack">Laboratorios & R&D</a></div>
-				<div class="footer-column"><h3>COMUNIDAD & CÓDIGO</h3><a href="https://github.com/Killa-Tech">GitHub Organization</a><a href="#proyectos">Documentación Técnica</a><a href="#contacto">Contribuidores Core</a><a href="#filosofia">Manifiesto Lunar</a></div>
-				<div class="footer-column"><h3>CANALES DE ENLACE</h3><a href="mailto:hola@killatech.dev">Canal de Contacto</a><a href="#contacto">Comunidad Matrix / Discord</a><a href="https://github.com/Killa-Tech">Boletín Cibernético</a><a href="#stack">Terminal KPG Key</a></div>
-			</div>
-			<div class="footer-legal section-shell"><span>© 2026 KILLA TECH. Todos los derechos reservados. Operaciones orbitales seguras.</span><div><a href="#contacto">Protocolo de Privacidad</a><a href="#contacto">Términos de Enlace</a></div></div>
-		</footer>
+<footer class="site-footer" id="footer">
+	<div class="footer-main section-shell">
+		<div class="footer-about">
+			<a class="brand" href="#inicio"><img src="/logo_killatech.png" alt="" width="32" height="32" /><span>KILLA TECH</span></a>
+			<p>"Forjando el futuro del software desde las aulas. De estudiantes de ingeniería a founders de startups tech."</p>
+		</div>
+		<div class="footer-column">
+			<h3>NAVEGACIÓN</h3>
+			<a href="#inicio">Inicio</a>
+			<a href="#filosofia">Filosofia</a>
+			<a href="#proyectos">Proyectos</a>
+			<a href="#fundadores">Fundadores</a>
+		</div>
+		<div class="footer-column">
+			<h3>COMUNIDAD</h3>
+			<div class="enlaces"><span><GitHubIcon size={20}/></span><a href="https://github.com/Killa-Tech">Equipo de GitHub</a></div>
+			<div class="enlaces"><span><DiscordIcon size={20} color={"#ffffff"}/></span><a href="">Grupo de Discord</a></div>
+			<div class="enlaces"><span><WhatsAppIcon size={20} color={"#ffffff"}/></span><a href="">Canal de WatsApp</a></div>
+		</div>
+		<div class="footer-column">
+			<h3>CONTACTOS</h3>
+			<div class="enlaces"><span><MailIcon size={18} color={"#ffffff"}/></span><a href="">killa.tech@gmail.com</a></div>
+			<div class="enlaces"><span><TelefonoIcon size={18} color={"#ffffff"}/></span><a href="">+54 388 999 9999</a></div>
+		</div>
+
+		<div class="footer-column-mobile">
+			<h3>NAVEGACIÓN</h3>
+			<a class="a" href="#inicio">Inicio</a>
+			<a class="a" href="#filosofia">Filosofia</a>
+			<a class="a" href="#proyectos">Proyectos</a>
+			<a class="a" href="#fundadores">Fundadores</a>
+		</div>
+		<div class="footer-row-mobile">
+			<h3>COMUNIDAD</h3>
+			<div class="enlaces-mobile"><a href="https://github.com/Killa-Tech"><span><GitHubIcon size={20}/></span></a>GitHub</div>
+			<div class="enlaces-mobile"><a href=""><span><DiscordIcon size={20} color={"#ffffff"}/></span></a>Discord</div>
+			<div class="enlaces-mobile"><a href=""><span><WhatsAppIcon size={20} color={"#ffffff"}/></span></a>WhatsApp</div>
+		</div>
+		<div class="footer-row-mobile">
+			<h3>CONTACTOS</h3>
+			<div class="enlaces-mobile"><a href=""><span><MailIcon size={18} color={"#ffffff"}/></span></a>Correo</div>
+			<div class="enlaces-mobile"><a href=""><span><TelefonoIcon size={18} color={"#ffffff"}/></span></a>Telefono</div>
+		</div>
+
+	</div>
+	<div class="footer-legal section-shell">
+		<span>© 2026 KILLA TECH. Todos los derechos reservados. Operaciones orbitales seguras.</span>
+		<div>
+			<a href="#contacto">Protocolo de Privacidad</a>
+			<a href="#contacto">Términos de Enlace</a>
+		</div>
+	</div>
+</footer>
  
